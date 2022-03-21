@@ -13,11 +13,20 @@
   "devDependencies": {
     "commitizen": "^4.2.4",
     "cz-conventional-changelog": "^3.3.0",
-    "husky": "^7.0.0"
+    "eslint": "^8.11.0",
+    "husky": "^7.0.0",
+    "lint-staged": "^12.3.7",
+    "prettier": "^2.6.0",
+    "stylelint": "^14.6.0"
   },
   "config": {
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
     }
+  },
+  "lint-staged": {
+    "client/src/**/*.{js,jsx,ts,tsx}": "eslint --fix",
+    "client/src/**/*.css": "stylelint --fix",
+    "client/src/**/*.{js.jsx,ts,tsx,css}": "prettier --write --ignore-unknown"
   }
 }
