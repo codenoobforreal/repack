@@ -7,11 +7,10 @@
     "eslint:recommended",
     "plugin:react/recommended",
     "react-app",
-    "react-app/jest",
     "plugin:react/jsx-runtime",
     "plugin:@typescript-eslint/recommended",
-    "plugin:prettier/recommended",
-    "prettier"
+    "plugin:prettier/recommended"
+    // "prettier"
   ],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
@@ -21,7 +20,21 @@
     "ecmaVersion": "latest",
     "sourceType": "module"
   },
-  "plugins": ["react", "@typescript-eslint", "prettier"],
+  "plugins": ["react", "@typescript-eslint", "testing-library", "prettier"],
+  "overrides": [
+    {
+      "files": [
+        "**/__tests__/**/*.[jt]s?(x)",
+        "**/?(*.)+(spec|test).[jt]s?(x)"
+      ],
+      "extends": [
+        "plugin:testing-library/react",
+        "plugin:testing-library/dom",
+        "plugin:jest-dom/recommended",
+        "react-app/jest"
+      ]
+    }
+  ],
   "rules": {
     "prettier/prettier": "error"
   }

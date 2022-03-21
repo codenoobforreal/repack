@@ -10,6 +10,9 @@ lerna-debug.log*
 # os related
 .DS_Store
 
+# testing
+coverage
+
 # Runtime data
 pids
 *.pid
