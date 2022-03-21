@@ -53,7 +53,7 @@
   "scripts": {
     "build": "webpack --node-env=production",
     "watch": "webpack --watch",
-    "serve": "webpack serve",
+    "start": "webpack serve",
     "test": "jest"
   },
   "dependencies": {

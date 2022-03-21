@@ -7,7 +7,9 @@
     "test:client": "npm run test --prefix client",
     "test": "npm run test:client",
     "prepare": "husky install",
-    "release": "HUSKY=0 standard-version"
+    "release": "HUSKY=0 standard-version",
+    "start": "npm run start --prefix client",
+    "build": "npm run build --prefix client"
   },
   "keywords": [
     "webpack5",
