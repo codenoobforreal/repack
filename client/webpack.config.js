@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-var-requires */
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
@@ -8,7 +9,7 @@ const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 const BundleAnalyzerPlugin =
   require("webpack-bundle-analyzer").BundleAnalyzerPlugin;
 const svgToMiniDataURI = require("mini-svg-data-uri");
-const SpeedMeasurePlugin = require("speed-measure-webpack-plugin");
+// const SpeedMeasurePlugin = require("speed-measure-webpack-plugin");
 
 const isProduction = process.env.NODE_ENV == "production";
 
@@ -107,7 +108,9 @@ const config = {
         // 额外排除corejs与buildin，它们会被打包到源代码中
         exclude: [
           /node_modules/,
+          // eslint-disable-next-line no-useless-escape
           /node_modules[\\\/]core-js/,
+          // eslint-disable-next-line no-useless-escape
           /node_modules[\\\/]webpack[\\\/]buildin/,
         ],
         use: [babelLoader],

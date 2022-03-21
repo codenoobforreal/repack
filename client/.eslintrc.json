@@ -1,7 +1,7 @@
 {
   "env": {
     "browser": true,
-    "es2021": true
+    "jest": true
   },
   "extends": [
     "eslint:recommended",
@@ -9,8 +9,8 @@
     "react-app",
     "plugin:react/jsx-runtime",
     "plugin:@typescript-eslint/recommended",
-    "plugin:prettier/recommended"
-    // "prettier"
+    "plugin:prettier/recommended",
+    "prettier" // 需要放置在最后，处理与prettier冲突的规则（eslint-config-prettier）
   ],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
@@ -21,6 +21,7 @@
     "sourceType": "module"
   },
   "plugins": ["react", "@typescript-eslint", "testing-library", "prettier"],
+  // 针对测试使用的eslint规则
   "overrides": [
     {
       "files": [
