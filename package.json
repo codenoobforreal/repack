@@ -4,7 +4,7 @@
   "description": "webpack react express boilerplate",
   "main": "index.js",
   "scripts": {
-    "test": "npm run test --prefix client & npm run test --prefix server",
+    "test": "npm run test --prefix client && npm run test --prefix server",
     "prepare": "husky install",
     "release": "HUSKY=0 standard-version",
     "start:client": "npm run start --prefix client",
@@ -40,6 +40,9 @@
     "client/src/**/*.{js,jsx,ts,tsx}": "eslint --fix",
     "client/src/**/*.css": "stylelint --fix",
     "client/src/**/*.{js.jsx,ts,tsx,css}": "prettier --write --ignore-unknown",
-    "server/src/**/*.{ts}": "eslint --fix,prettier --write --ignore-unknow"
+    "server/src/**/*.ts": [
+      "eslint --fix",
+      "prettier --write --ignore-unknow"
+    ]
   }
 }
