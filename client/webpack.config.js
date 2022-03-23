@@ -86,7 +86,7 @@ const config = {
   },
   output: {
     filename: "[name].[contenthash].js",
-    path: path.resolve(__dirname, "dist"),
+    path: path.resolve(__dirname, "..", "server", "public"),
     clean: true,
   },
   devServer: {
