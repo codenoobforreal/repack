@@ -44,9 +44,10 @@
     "webpack-dev-server": "^4.7.4",
     "workbox-webpack-plugin": "^6.5.1"
   },
-  "version": "1.0.0",
   "name": "repack-client",
   "description": "repack client side",
+  "main": "src/index.tsx",
+  "license": "MIT",
   "sideEffects": [
     "*.css"
   ],

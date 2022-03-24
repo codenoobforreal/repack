@@ -1,17 +1,14 @@
 {
-  "name": "server",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "name": "repack-server",
+  "description": "repack server side",
+  "main": "src/index.ts",
   "scripts": {
     "test": "jest --detectOpenHandles",
     "dev": "tsc-watch --onSuccess 'node ./dist/index.js'",
     "compile": "tsc",
     "start:pm2": "pm2 start ./dist/index.js -i max"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "devDependencies": {
     "@babel/core": "^7.17.8",
     "@babel/preset-env": "^7.16.11",

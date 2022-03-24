@@ -2,7 +2,21 @@
   "name": "repack",
   "version": "0.0.1",
   "description": "webpack react express boilerplate",
-  "main": "index.js",
+  "author": "codenoobforreal <419757597@qq.com>",
+  "license": "MIT",
+  "repository": "github:codenoobforreal:repack",
+  "homepage": "https://github.com/codenoobforreal/repack#readme",
+  "bugs": {
+    "url": "https://github.com/codenoobforreal/repack/issues",
+    "email": "419757597@qq.com"
+  },
+  "keywords": [
+    "webpack5",
+    "react",
+    "express",
+    "nodejs",
+    "boilerplate"
+  ],
   "scripts": {
     "install:client": "npm install --prefix client",
     "install:server": "npm install --prefix server",
@@ -13,15 +27,6 @@
     "start:client": "npm run start --prefix client",
     "serve": "npm run build --prefix client && npm run dev --prefix server"
   },
-  "keywords": [
-    "webpack5",
-    "react",
-    "express",
-    "nodejs",
-    "boilerplate"
-  ],
-  "author": "codenoobforreal <419757597@qq.com>",
-  "license": "ISC",
   "devDependencies": {
     "@commitlint/cli": "^16.2.3",
     "@commitlint/config-conventional": "^16.2.1",
