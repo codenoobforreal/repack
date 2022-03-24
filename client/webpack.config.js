@@ -11,7 +11,7 @@ const BundleAnalyzerPlugin =
 const svgToMiniDataURI = require("mini-svg-data-uri");
 // const SpeedMeasurePlugin = require("speed-measure-webpack-plugin");
 
-const isProduction = process.env.NODE_ENV == "production";
+const isProduction = process.env.NODE_ENV === "production";
 
 const stylesHandler = isProduction
   ? MiniCssExtractPlugin.loader

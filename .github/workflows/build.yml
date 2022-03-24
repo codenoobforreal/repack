@@ -1,4 +1,4 @@
-name: repack ci
+name: repack build ci
 on:
   push:
     branches: [master]
@@ -18,7 +18,7 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
           cache: npm
-          cache-dependency-path: ["client/package-lock.json", "server/package-lock.json"]
+          cache-dependency-path: "**/package-lock.json"
       - name: install top level dependencies
         run: npm install
       - name: install client and server side dependencies
