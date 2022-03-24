@@ -3,6 +3,7 @@ import path from "path";
 import { apiRouter } from "./routes";
 import cors from "cors";
 import morgan from "morgan";
+import helmet from "helmet";
 
 const api = express();
 
@@ -15,6 +16,8 @@ const api = express();
 // });
 
 const clientDistPath = path.join(__dirname, "../..", "public");
+
+api.use(helmet());
 
 api.use(cors());
 

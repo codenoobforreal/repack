@@ -7,6 +7,10 @@ yarn-error.log*
 lerna-debug.log*
 .pnpm-debug.log*
 
+# secret
+key.pem
+cert.pem
+
 # os related
 .DS_Store
 
