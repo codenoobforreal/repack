@@ -17,6 +17,8 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node-version }}
+          cache: npm
+          cache-dependency-path: ["client/package-lock.json", "server/package-lock.json"]
       - name: install top level dependencies
         run: npm install
       - name: install client and server side dependencies
