@@ -1,0 +1,13 @@
+name: ci
+on:
+  pull_request_target:
+    branches:
+      - master
+    paths-ignore:
+      - "client/src/**"
+      - "server/src/**"
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - run: 'echo "No build required" '
