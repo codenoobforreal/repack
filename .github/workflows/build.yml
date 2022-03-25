@@ -1,9 +1,14 @@
-name: repack build ci
+name: ci
 on:
   push:
-    branches: [master]
-  pull_request:
-    branches: [master]
+    branches:
+      - master
+  pull_request_target:
+    branches:
+      - master
+    paths:
+      - "client/src/**"
+      - "server/src/**"
 jobs:
   build:
     strategy:
@@ -21,8 +26,6 @@ jobs:
           cache-dependency-path: "**/package-lock.json"
       - name: install top level dependencies
         run: npm install
-      - name: install client and server side dependencies
-        run: npm run install
       - name: building client side
         run: npm run build --prefix client
       - name: run test
